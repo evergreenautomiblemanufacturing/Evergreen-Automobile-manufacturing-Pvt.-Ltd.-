@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evergreen Automobile Manufacturing</title>
+    <meta name="description" content="Evergreen Automobile Manufacturing - Experts in commercial vehicle body building, mechanical work, and sales.">
+    <meta name="keywords" content="Automobile Manufacturing, Commercial Vehicles, Body Building, Mechanical Work">
+    <meta name="author" content="Evergreen Automobile Manufacturing">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -32,7 +35,7 @@
         section {
             padding: 50px;
         }
-        .about, .services, .contact, .gallery {
+        .about, .services, .contact, .gallery, .thank-you {
             background: white;
             margin: 20px auto;
             padding: 20px;
@@ -45,6 +48,7 @@
             max-width: 300px;
             margin: 10px;
             border-radius: 10px;
+            loading: lazy;
         }
         footer {
             background-color: #2c3e50;
@@ -69,7 +73,20 @@
             cursor: pointer;
             border-radius: 5px;
         }
+        .hidden { display: none; }
+        @media (max-width: 768px) {
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
     </style>
+    <script>
+        function showThankYou() {
+            document.getElementById("main-content").classList.add("hidden");
+            document.getElementById("thank-you").classList.remove("hidden");
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -81,7 +98,7 @@
         <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
     </nav>
-    <section>
+    <section id="main-content">
         <div id="about" class="about">
             <h2>About Us</h2>
             <p>Leading in commercial vehicle body building and auto solutions.</p>
@@ -98,13 +115,18 @@
         </div>
         <div id="contact" class="contact">
             <h2>Contact Us</h2>
-            <form name="contact" method="POST" data-netlify="true">
+            <form name="contact" method="POST" data-netlify="true" onsubmit="event.preventDefault(); showThankYou();">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" placeholder="Your Message" required></textarea>
                 <button type="submit">Send</button>
             </form>
         </div>
+    </section>
+    <section id="thank-you" class="thank-you hidden">
+        <h2>Thank You!</h2>
+        <p>Your message has been successfully sent. We will get back to you soon.</p>
+        <a href="index.html">Back to Home</a>
     </section>
     <footer>
         &copy; 2025 Evergreen Automobile Manufacturing Pvt. Ltd. All Rights Reserved.
