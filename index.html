@@ -48,7 +48,6 @@
             max-width: 300px;
             margin: 10px;
             border-radius: 10px;
-            loading: lazy;
         }
         footer {
             background-color: #2c3e50;
@@ -82,7 +81,8 @@
         }
     </style>
     <script>
-        function showThankYou() {
+        function showThankYou(event) {
+            event.preventDefault();
             document.getElementById("main-content").classList.add("hidden");
             document.getElementById("thank-you").classList.remove("hidden");
         }
@@ -115,7 +115,7 @@
         </div>
         <div id="contact" class="contact">
             <h2>Contact Us</h2>
-            <form name="contact" method="POST" data-netlify="true" onsubmit="event.preventDefault(); showThankYou();">
+            <form name="contact" method="POST" data-netlify="true" onsubmit="showThankYou(event)">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" placeholder="Your Message" required></textarea>
@@ -126,7 +126,7 @@
     <section id="thank-you" class="thank-you hidden">
         <h2>Thank You!</h2>
         <p>Your message has been successfully sent. We will get back to you soon.</p>
-        <a href="index.html">Back to Home</a>
+        <a href="#" onclick="window.location.reload();">Back to Home</a>
     </section>
     <footer>
         &copy; 2025 Evergreen Automobile Manufacturing Pvt. Ltd. All Rights Reserved.
