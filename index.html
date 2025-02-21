@@ -52,10 +52,28 @@
             bottom: 0;
             width: 100%;
         }
+        .contact-form input, .contact-form textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .contact-form button {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
     </style>
     <script>
         function scrollToSection(sectionId) {
             document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+        function submitContactForm() {
+            alert('Thank you! Your message has been sent.');
         }
     </script>
 </head>
@@ -71,7 +89,7 @@
     <section>
         <div id="about" class="about">
             <h2>About Us</h2>
-            <p>Evergreen Automobile Manufacturing is dedicated to producing sustainable and innovative vehicles for a better future.</p>
+            <p>Leading in commercial vehicle body building and auto solutions.</p>
         </div>
         <div id="services" class="services">
             <h2>Our Services</h2>
@@ -108,7 +126,7 @@
                 <input type="text" placeholder="Your Name">
                 <input type="email" placeholder="Your Email">
                 <textarea placeholder="Your Message"></textarea>
-                <button type="submit">Send</button>
+                <button type="button" onclick="submitContactForm()">Send</button>
             </div>
         </div>
     </section>
