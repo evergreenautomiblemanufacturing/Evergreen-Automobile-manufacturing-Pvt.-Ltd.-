@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evergreen Automobile Manufacturing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background: url('https://source.unsplash.com/1600x900/?automobile') no-repeat center center/cover;
+            color: white;
+            padding: 60px 20px;
+            font-size: 32px;
+            font-weight: bold;
+        }
+        nav {
+            background-color: #1a252f;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        section {
+            padding: 50px;
+        }
+        .about, .services, .contact {
+            background: white;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .service-item {
+            text-align: left;
+            padding: 15px;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        Evergreen Automobile Manufacturing Pvt. Ltd.
+    </header>
+    <nav>
+        <a href="#about" onclick="scrollToSection('about')">About</a>
+        <a href="#services" onclick="scrollToSection('services')">Services</a>
+        <a href="#contact" onclick="scrollToSection('contact')">Contact</a>
+    </nav>
+    <section>
+        <div id="about" class="about">
+            <h2>About Us</h2>
+            <p>Evergreen Automobile Manufacturing is dedicated to producing sustainable and innovative vehicles for a better future.</p>
+        </div>
+        <div id="services" class="services">
+            <h2>Our Services</h2>
+            <div class="service-item">
+                <h3>Commercial Vehicle Body Building</h3>
+                <p>We design and manufacture durable and high-quality commercial vehicle bodies, ensuring compliance with industry standards.</p>
+            </div>
+            <div class="service-item">
+                <h3>Mechanical Work</h3>
+                <p>Our expert mechanics provide maintenance, repairs, and performance enhancements for all types of automobiles.</p>
+            </div>
+            <div class="service-item">
+                <h3>Marketing & Sales</h3>
+                <p>We offer strategic marketing and sales solutions to help businesses enhance their reach and maximize revenue in the automotive sector.</p>
+            </div>
+            <div class="service-item">
+                <h3>Custom Vehicle Modifications</h3>
+                <p>We provide specialized customization services for vehicles to meet unique requirements, including modifications for commercial and industrial use.</p>
+            </div>
+            <div class="service-item">
+                <h3>Fleet Management Solutions</h3>
+                <p>Our fleet management services help businesses optimize vehicle utilization, track maintenance, and improve operational efficiency.</p>
+            </div>
+        </div>
+        <div id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <p>Evergreen Automobile Manufacturing Pvt. Ltd.</p>
+            <p>3/105 Thandarai Main Road, Parivakkam, Ponamallee, Chennai - 600056, Tamil Nadu, India.</p>
+            <p>CIN: U72409TN2019PTC0065834</p>
+            <p>GST: 33AZYPN3601P1ZQ</p>
+            <p>Email: evergreenbodyworks@gmail.com | Phone: +123 456 7890</p>
+            <div class="contact-form">
+                <h3>Get in Touch</h3>
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <textarea placeholder="Your Message"></textarea>
+                <button type="submit">Send</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        &copy; 2025 Evergreen Automobile Manufacturing Pvt. Ltd. All Rights Reserved.
+    </footer>
+</body>
+</html>
