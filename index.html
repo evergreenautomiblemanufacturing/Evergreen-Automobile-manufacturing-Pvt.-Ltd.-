@@ -40,10 +40,6 @@
             width: 80%;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
-        .service-item {
-            text-align: left;
-            padding: 15px;
-        }
         .gallery img {
             width: 100%;
             max-width: 300px;
@@ -74,24 +70,16 @@
             border-radius: 5px;
         }
     </style>
-    <script>
-        function scrollToSection(sectionId) {
-            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-        }
-        function submitContactForm() {
-            alert('Thank you! Your message has been sent.');
-        }
-    </script>
 </head>
 <body>
     <header>
         Evergreen Automobile Manufacturing Pvt. Ltd.
     </header>
     <nav>
-        <a href="#about" onclick="scrollToSection('about')">About</a>
-        <a href="#services" onclick="scrollToSection('services')">Services</a>
-        <a href="#gallery" onclick="scrollToSection('gallery')">Gallery</a>
-        <a href="#contact" onclick="scrollToSection('contact')">Contact</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
     </nav>
     <section>
         <div id="about" class="about">
@@ -100,26 +88,7 @@
         </div>
         <div id="services" class="services">
             <h2>Our Services</h2>
-            <div class="service-item">
-                <h3>Commercial Vehicle Body Building</h3>
-                <p>We design and manufacture durable and high-quality commercial vehicle bodies, ensuring compliance with industry standards.</p>
-            </div>
-            <div class="service-item">
-                <h3>Mechanical Work</h3>
-                <p>Our expert mechanics provide maintenance, repairs, and performance enhancements for all types of automobiles.</p>
-            </div>
-            <div class="service-item">
-                <h3>Marketing & Sales</h3>
-                <p>We offer strategic marketing and sales solutions to help businesses enhance their reach and maximize revenue in the automotive sector.</p>
-            </div>
-            <div class="service-item">
-                <h3>Custom Vehicle Modifications</h3>
-                <p>We provide specialized customization services for vehicles to meet unique requirements, including modifications for commercial and industrial use.</p>
-            </div>
-            <div class="service-item">
-                <h3>Fleet Management Solutions</h3>
-                <p>Our fleet management services help businesses optimize vehicle utilization, track maintenance, and improve operational efficiency.</p>
-            </div>
+            <p>We specialize in commercial vehicle body building, mechanical work, marketing, and sales.</p>
         </div>
         <div id="gallery" class="gallery">
             <h2>Our Work</h2>
@@ -129,18 +98,12 @@
         </div>
         <div id="contact" class="contact">
             <h2>Contact Us</h2>
-            <p>Evergreen Automobile Manufacturing Pvt. Ltd.</p>
-            <p>3/105 Thandarai Main Road, Parivakkam, Ponamallee, Chennai - 600056, Tamil Nadu, India.</p>
-            <p>CIN: U72409TN2019PTC0065834</p>
-            <p>GST: 33AZYPN3601P1ZQ</p>
-            <p>Email: evergreenbodyworks@gmail.com | Phone: +123 456 7890</p>
-            <div class="contact-form">
-                <h3>Get in Touch</h3>
-                <input type="text" placeholder="Your Name">
-                <input type="email" placeholder="Your Email">
-                <textarea placeholder="Your Message"></textarea>
-                <button type="button" onclick="submitContactForm()">Send</button>
-            </div>
+            <form name="contact" method="POST" data-netlify="true">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
         </div>
     </section>
     <footer>
